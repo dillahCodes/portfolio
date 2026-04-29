@@ -18,9 +18,11 @@
   /* gradient */
 
   --bg-gradient-onyx: linear-gradient(to bottom right, hsl(240, 1%, 25%) 3%, hsl(0, 0%, 19%) 97%);
-  --bg-gradient-jet: linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
+  --bg-gradient-jet:
+    linear-gradient(to bottom right, hsla(240, 1%, 18%, 0.251) 0%, hsla(240, 2%, 11%, 0) 100%), hsl(240, 2%, 13%);
   --bg-gradient-yellow-1: linear-gradient(to bottom right, hsl(45, 100%, 71%) 0%, hsla(36, 100%, 69%, 0) 50%);
-  --bg-gradient-yellow-2: linear-gradient(135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
+  --bg-gradient-yellow-2:
+    linear-gradient(135deg, hsla(45, 100%, 71%, 0.251) 0%, hsla(35, 100%, 68%, 0) 59.86%), hsl(240, 2%, 13%);
   --border-gradient-onyx: linear-gradient(to bottom right, hsl(0, 0%, 25%) 0%, hsla(0, 0%, 25%, 0) 50%);
   --text-gradient-yellow: linear-gradient(to right, hsl(45, 100%, 72%), hsl(35, 100%, 68%));
 
@@ -346,7 +348,9 @@ main {
   text-decoration: none;
   border-radius: 8px;
   box-shadow: 0 4px 8px hsla(0, 0%, 0%, 0.15);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
   margin-bottom: 15px;
 }
 
@@ -789,12 +793,6 @@ main {
   width: 100%;
   display: block;
   object-fit: cover;
-  filter: grayscale(1);
-  transition: var(--transition-1);
-}
-
-.clients-item img:hover {
-  filter: grayscale(0);
 }
 
 /*-----------------------------------*\
@@ -813,7 +811,8 @@ main {
   margin-bottom: 30px;
 }
 
-.timeline .title-wrapper {
+.timeline .title-wrapper,
+.clients .title-wrapper {
   display: flex;
   align-items: center;
   gap: 15px;
@@ -1330,8 +1329,8 @@ textarea.form-input::-webkit-resizer {
    * client
    */
 
-  .clients-item {
-    min-width: calc(33.33% - 10px);
+  .clients-list {
+    grid-template-columns: repeat(4, 1fr);
   }
 
   /**
@@ -1588,14 +1587,8 @@ textarea.form-input::-webkit-resizer {
   /* clients */
 
   .clients-list {
-    gap: 50px;
-    margin: 0 -30px;
-    padding: 45px;
-    scroll-padding-inline: 45px;
-  }
-
-  .clients-item {
-    min-width: calc(33.33% - 35px);
+    gap: 10px;
+    padding: 15px 0;
   }
 
   /**
@@ -1862,8 +1855,8 @@ textarea.form-input::-webkit-resizer {
 
   /* clients */
 
-  .clients-item {
-    min-width: calc(25% - 38px);
+  .clients-list {
+    grid-template-columns: repeat(5, 1fr);
   }
 
   /**
@@ -1904,7 +1897,9 @@ textarea.form-input::-webkit-resizer {
     border: 5px solid var(--smoky-black);
     background: hsla(0, 0%, 100%, 0.1);
     border-radius: 20px;
-    box-shadow: inset 1px 1px 0 hsla(0, 0%, 100%, 0.11), inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
+    box-shadow:
+      inset 1px 1px 0 hsla(0, 0%, 100%, 0.11),
+      inset -1px -1px 0 hsla(0, 0%, 100%, 0.11);
   }
 
   body::-webkit-scrollbar-thumb:hover {
