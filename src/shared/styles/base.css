@@ -1,0 +1,39 @@
+/* ===== Base Styles ===== */
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background font-sans text-foreground antialiased;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
+  }
+
+  ::selection {
+    background: hsl(45, 100%, 72%);
+    color: hsl(0, 0%, 7%);
+  }
+
+  :focus-visible {
+    outline-color: hsl(45, 100%, 72%);
+  }
+
+  /* Custom Scrollbar */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: hsl(240, 1%, 17%);
+    border-radius: 5px;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: hsl(45, 100%, 72%);
+    border-radius: 5px;
+  }
+}
