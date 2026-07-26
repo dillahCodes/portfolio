@@ -56,7 +56,7 @@ export function Sidebar() {
           aria-label="contact toggler"
           aria-expanded={isOpen}
           onClick={() => setIsOpen(!isOpen)}
-          className={`group absolute -top-4 -right-4 z-1 rounded-tl-none rounded-tr-2xl rounded-br-none rounded-bl-2xl p-2.5 text-sm text-primary shadow-elevated transition-all duration-250 sm:-top-7.5 sm:-right-7.5 sm:px-4 lg:hidden ${
+          className={`group absolute -top-4 -right-4 z-1 rounded-tl-none rounded-tr-2xl rounded-br-none rounded-bl-2xl p-2.5 text-sm text-primary shadow-elevated transition-all duration-250 lg:hidden ${
             isOpen
               ? "gradient-yellow-1"
               : "gradient-border-onyx hover:gradient-yellow-1 focus:gradient-yellow-1"
@@ -70,9 +70,8 @@ export function Sidebar() {
             }`}
             style={{ borderRadius: "inherit" }}
           />
-          <span className="hidden text-xs sm:block">Show Contacts</span>
           <IoChevronDown
-            className={`text-lg transition-transform duration-300 sm:hidden ${
+            className={`text-lg transition-transform duration-300 ${
               isOpen ? "rotate-180" : ""
             }`}
           />
