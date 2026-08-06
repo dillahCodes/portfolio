@@ -1,0 +1,31 @@
+services:
+  # ==========================================
+  # DEVELOPMENT (LOCAL)
+  # ==========================================
+  dev:
+    container_name: portfolio-dev
+    build:
+      context: .
+      target: dev
+    ports:
+      - "3000:3000"
+    volumes:
+      - .:/app
+      - /app/node_modules
+      - /app/.next
+    environment:
+      NODE_ENV: development
+    profiles:
+      - dev
+
+  # ==========================================
+  # PRODUCTION DEPLOYMENT
+  # ==========================================
+  prod:
+    image: dillahcodes/portfolio:latest
+    container_name: portfolio
+    ports:
+      - "3000:3000"
+    restart: unless-stopped
+    profiles:
+      - prod

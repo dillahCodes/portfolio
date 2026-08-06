@@ -1,0 +1,12 @@
+Dockerfile
+.dockerignore
+node_modules
+.next
+.git
+.gitignore
+.env*.local
+.vscode
+.idea
+README.md
+AGENTS.md
+CLAUDE.md
