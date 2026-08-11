@@ -7,7 +7,7 @@
 # Start development environment
 dev:
 	@echo "Starting Development environment..."
-	docker compose --profile dev up -d
+	docker compose --profile dev up
 
 # Stop development environment
 dev-down:
