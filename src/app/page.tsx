@@ -1,51 +1,23 @@
-"use client";
-
-import { useState } from "react";
-import { Sidebar } from "@/shared/components/sidebar";
-import { Navbar } from "@/shared/components/navbar";
+import type { Metadata } from "next";
 import { AboutSection } from "@/features/about/about-section";
-import { ResumeSection } from "@/features/resume/resume-section";
-import { PortfolioSection } from "@/features/portfolio/portfolio-section";
-import { ContactSection } from "@/features/contact/contact-section";
 
-export enum Tab {
-  ABOUT = "about",
-  RESUME = "resume",
-  PORTFOLIO = "portfolio",
-  CONTACT = "contact",
-}
-
-export const TABS = [
-  Tab.ABOUT,
-  Tab.RESUME,
-  Tab.PORTFOLIO,
-  Tab.CONTACT,
-] as const;
-
-const componentMap: Record<Tab, React.ReactNode> = {
-  [Tab.ABOUT]: <AboutSection />,
-  [Tab.RESUME]: <ResumeSection />,
-  [Tab.PORTFOLIO]: <PortfolioSection />,
-  [Tab.CONTACT]: <ContactSection />,
+export const metadata: Metadata = {
+  title: "About DillahCodes — Abdillah Juniansyah | Fullstack Developer",
+  description:
+    "Learn about Abdillah Juniansyah (DillahCodes), a passionate Fullstack Developer from Tangerang, Indonesia. Experienced in React, Next.js, Laravel, Docker, and modern web technologies.",
+  keywords: [
+    "about dillahcodes",
+    "abdillah juniansyah",
+    "fullstack developer indonesia",
+    "web developer tangerang",
+    "react developer",
+    "next.js developer",
+  ],
+  alternates: {
+    canonical: "/",
+  },
 };
 
-export default function Home() {
-  const [activeTab, setActiveTab] = useState<Tab>(Tab.ABOUT);
-
-  return (
-    <main className="flex w-full max-w-7xl flex-col gap-4 lg:flex-row">
-      <Sidebar />
-      <div className="relative w-full pb-16 lg:pb-0">
-        <Navbar activeTab={activeTab} onTabChange={setActiveTab} />
-
-        <div className="z-1 min-h-full rounded-2xl border border-border bg-card p-3.75 md:p-7.5">
-          <div key={activeTab} className="grid animate-expand">
-            <div className="animate-overflow">
-              <div className="animate-fade">{componentMap[activeTab]}</div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-  );
+export default function HomePage() {
+  return <AboutSection />;
 }
