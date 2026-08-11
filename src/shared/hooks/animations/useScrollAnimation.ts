@@ -98,6 +98,12 @@ export function useScrollAnimation<T extends HTMLElement = HTMLDivElement>(
       return;
     }
 
+    if (once && hasAnimated.current) {
+      applyStyles(element, true);
+
+      return;
+    }
+
     setElementStyles(element, "0", getInitialTransform(type, offset), "none");
 
     void element.offsetHeight;
@@ -123,6 +129,8 @@ export function useScrollAnimation<T extends HTMLElement = HTMLDivElement>(
         }
 
         if (once && hasAnimated.current) {
+          applyStyles(element, true);
+
           return;
         }
 
@@ -143,8 +151,7 @@ export function useScrollAnimation<T extends HTMLElement = HTMLDivElement>(
           observer.unobserve(element);
         }
       },
-
-      { threshold },
+      { threshold: 0 },
     );
 
     observer.observe(element);
