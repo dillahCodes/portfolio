@@ -7,36 +7,36 @@ export interface Project {
 
 export const projects: Project[] = [
   {
-    title: "Economic Calculator",
-    category: "web development",
-    image: "/images/project-1.png",
-    url: "https://github.com/dillahCodes/EKONOMI_DAN_PEMROGRAMAN",
-  },
-  {
-    title: "Blog Web",
-    category: "web development",
-    image: "/images/project-2.png",
-    url: "https://github.com/dillahCodes/firebase-react-redux-blog-app",
-  },
-  {
-    title: "Cloud Storage",
-    category: "web development",
-    image: "/images/project-3.png",
-    url: "https://github.com/dillahCodes/cloud-storage-project",
+    title: "AuthForge",
+    category: "Applications",
+    image: "/projects/authforge.png",
+    url: "https://github.com/dillahCodes/AuthForge",
   },
   {
     title: "Nusantara Kita",
-    category: "web development",
-    image: "/images/project-5.png",
-    url: "https://github.com/Yuefii/nusantarakita",
+    category: "Web development",
+    image: "/projects/nusantarakita.png",
+    url: "https://github.com/Yuefii/NusantaraKita",
+  },
+  {
+    title: "Dijemurin",
+    category: "Applications",
+    image: "/projects/dijemurin.png",
+    url: "https://github.com/dillahCodes/dijemurin",
+  },
+  {
+    title: "Nysa Cookies",
+    category: "Web development",
+    image: "/projects/nysacookies.png",
+    url: "https://github.com/dillahCodes/nysacookies",
   },
 ];
 
 export const filterCategories = [
   "All",
-  "Web design",
   "Applications",
   "Web development",
 ] as const;
 
 export type FilterCategory = (typeof filterCategories)[number];
+

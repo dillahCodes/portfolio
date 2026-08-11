@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, Activity } from "react";
 import { IoChevronDown } from "react-icons/io5";
 import { SectionTitle } from "@/shared/components/section-title";
 import { ProjectFilter } from "./project-filter";
@@ -14,7 +14,9 @@ export function PortfolioSection() {
   const filteredProjects =
     activeFilter === "all"
       ? projects
-      : projects.filter((p) => p.category === activeFilter);
+      : projects.filter(
+          (p) => p.category.toLowerCase() === activeFilter.toLowerCase(),
+        );
 
   const handleFilterChange = (filter: string) => {
     setActiveFilter(filter);
@@ -47,7 +49,7 @@ export function PortfolioSection() {
           />
         </button>
 
-        {mobileSelectOpen && (
+        <Activity mode={mobileSelectOpen ? "visible" : "hidden"}>
           <ul className="absolute top-full z-10 mt-1.5 w-full rounded-xl border border-border bg-card p-1.5">
             {filterCategories.map((category) => (
               <li key={category}>
@@ -60,10 +62,10 @@ export function PortfolioSection() {
               </li>
             ))}
           </ul>
-        )}
+        </Activity>
       </div>
 
-      <ProjectGrid projects={filteredProjects} />
+      <ProjectGrid key={activeFilter} projects={filteredProjects} />
     </article>
   );
 }
