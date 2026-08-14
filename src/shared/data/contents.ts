@@ -22,6 +22,13 @@ export const contents: Content[] = [
     tiktokUrl: "https://www.tiktok.com/@dillah.codes/photo/7672750694289444114",
   },
   {
+    title: "Containerizing Next.js & Prisma ORM Projects Tutorial - Part 3",
+    category: "Tutorials",
+    image: "/contents/tutorial-containerize-nextjs-prisma-orm-part-3.png",
+    instagramUrl: "https://www.instagram.com/p/DcBin-vEsGE",
+    tiktokUrl: "https://vt.tiktok.com/ZSVdGLWhG/",
+  },
+  {
     title: "Containerizing Laravel & React Projects Tutorial - Part 2",
     category: "Tutorials",
     image: "/contents/tutorial-containerize-laravel-react-part-2.png",
