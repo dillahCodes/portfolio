@@ -7,7 +7,7 @@ export const personalData = {
   avatar: "/images/avatar-1.png",
   bio: `Third-year Information Systems undergraduate with hands-on experience developing modern web applications using JavaScript, React, Next.js, and TypeScript. Skilled in building responsive user interfaces, integrating REST APIs, and working with Firebase and PostgreSQL. Previously worked as a Fullstack Web Developer Intern, developing responsive frontend pages and integrating multiple APIs to support dynamic features. Passionate about Front-End and Web Application Development, with a focus on clean architecture, scalable components, and performance optimization.`,
   cvLink:
-    "https://drive.google.com/file/d/1SvRPyforPtsMFmO71Pfc7qyoaCP16Jf9/view?usp=drive_link",
+    "https://drive.google.com/file/d/1JU0F4ixaEGNO5wXRUpst_MW2qz2d-hi2/view?usp=drive_link",
   socials: [
     {
       name: "LinkedIn",
