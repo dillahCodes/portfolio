@@ -5,7 +5,13 @@ export const personalData = {
   phone: "+62 856-9569-5620",
   location: "Tangerang, Indonesia",
   avatar: "/images/avatar-1.png",
-  bio: `Third-year Information Systems undergraduate with hands-on experience developing modern web applications using JavaScript, React, Next.js, and TypeScript. Skilled in building responsive user interfaces, integrating REST APIs, and working with Firebase and PostgreSQL. Previously worked as a Fullstack Web Developer Intern, developing responsive frontend pages and integrating multiple APIs to support dynamic features. Passionate about Front-End and Web Application Development, with a focus on clean architecture, scalable components, and performance optimization.`,
+  bio: `Enthusiastic Full-Stack Developer with hands-on experience engineering scalable web applications using
+React, Next.js, Node.js, Laravel and TypeScript. Skilled in designing robust backend architectures,
+building responsive user interfaces, and managing databases with PostgreSQL and Prisma ORM. Have
+proven experience in developing end-to-end solutions, from complex REST API integrations and secure
+Role-Based Access Control (RBAC) systems to containerized deployments using Docker. Passionate
+about full-cycle software development with a strong focus on clean code architecture, seamless system
+performance, and delivering business-driven technical solutions.`,
   cvLink:
     "https://drive.google.com/file/d/1JU0F4ixaEGNO5wXRUpst_MW2qz2d-hi2/view?usp=drive_link",
   socials: [
